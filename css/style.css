@@ -11,7 +11,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
 .clear-fix {
@@ -24,9 +24,28 @@ h6 {
   padding: 0 5%;
 }
 
+.education-entry a {
+  margin-top: 20px;
+}
+
+.project {
+margin:0;
+}
+
+.project-entry {
+float:left;
+width:75%;
+overflow:hidden;
+}
+.project-entry {
+float:left;
+width:40%;
+overflow:hidden;
+}
+
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #ffff66;
   line-height: 48px;
   display: inline;
 }
@@ -105,11 +124,11 @@ a {
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #ffff66;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #ffff66;
 }
 
 .white-text {
@@ -129,7 +148,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #6666cc;
 }
 
 .flex-box {
@@ -168,6 +187,18 @@ span {
   text-align: center;
 }
 
+.gm-style .gm-style-iw {
+  color: red;
+  font-size: 15px;
+  font-weight: 500px;
+}
+#borderimg {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30 stretch; /* Opera 11-12.1 */
+    border-image: url(border.png) 30 stretch;
+}
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
