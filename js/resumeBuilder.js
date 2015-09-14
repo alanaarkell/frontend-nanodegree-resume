@@ -203,6 +203,7 @@ education.display = function() {
 };
 
 
+
 //calls bio //
 bio.display();
 //calls work //
