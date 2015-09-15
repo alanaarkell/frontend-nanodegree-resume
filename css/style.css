@@ -24,7 +24,7 @@ h6 {
   padding: 0 5%;
 }
 
-.education-entr a {
+.education-entry a {
   margin-top: 20px;
 }
 
@@ -33,14 +33,9 @@ margin:0;
 }
 
 .project-entry {
-float:left;
-width:75%;
-overflow:hidden;
-}
-.project-entry {
-float:left;
-width:40%;
-overflow:hidden;
+float: left;
+width: 40%;
+overflow: hidden;
 }
 
 h1 {
@@ -192,6 +187,7 @@ span {
   font-size: 15px;
   font-weight: 500px;
 }
+
 #borderimg {
     border: 10px solid transparent;
     padding: 15px;
@@ -199,8 +195,8 @@ span {
     -o-border-image: url(border.png) 30 stretch; /* Opera 11-12.1 */
     border-image: url(border.png) 30 stretch;
 }
-/* Media queries to handle various device widths */
 
+/* Media queries to handle various device widths */
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;

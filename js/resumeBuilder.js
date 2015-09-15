@@ -7,7 +7,7 @@ var bio = {
 		'github' : 'alanaarkell',
 		'twitter' : '@alanarkell',
 		'location' : 'Oakville,ON',
-		'welcomeMessage' : 'Hi everyone!'
+		'welcomeMessage' : 'Hi everyone'
 	    },
 	    'skills': [
 	    'Social Media Management',
@@ -44,10 +44,12 @@ bio.display= function() {
 	append(formattedBioPic + formattedWelcomeMessage).
 	append(HTMLskillsStart);
 
+if(bio.skills.length > 0){
 	for(skill in bio.skills) {
-		var formattedSkills = HTMLskills.replace("%data%",bio.skills[skill]);
+		 formattedSkills = HTMLskills.replace("%data%",bio.skills[skill]);
 		$("#skills").append(formattedSkills);
 	};
+};
 
 		$('#topContacts').prepend(contactItems);
 		$('#footerContacts').prepend(contactItems);
@@ -87,13 +89,16 @@ work.display = function	() {
 		var formattedEmployer = HTMLworkEmployer.replace('%data%', workEntry.employer);
 		var formattedTitle = HTMLworkTitle.replace("%data%", workEntry.title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-		$(".work-entry:last").append(formattedEmployerTitle);
 		var formattedLocation = HTMLworkLocation.replace('%data%',workEntry.location);
-		$(".work-entry:last").append(formattedLocation);
 		var formattedDates = HTMLworkDates.replace("%data%", workEntry.dates);
-		$(".work-entry:last").append(formattedDates);
 		var formattedDescription = HTMLworkDescription.replace("%data%", workEntry.description);
-		$(".work-entry:last").append(formattedDescription);
+
+		$('.work-entry:last').append (
+			formattedEmployerTitle +
+			formattedLocation +
+			formattedDates +
+			formattedDescription
+			);
 	}
 	)};
 
@@ -164,7 +169,7 @@ var education = {
 	 ],
 	};
 
-var showSchools = function() {
+education.showSchools = function() {
 	education.schools.forEach(function(school) {
 		$('#education').append(HTMLschoolStart);
 		var formattedName = (HTMLschoolName).replace('%data%', school.name);
@@ -181,7 +186,7 @@ var showSchools = function() {
 	});
 }
 
-var showOnlineCourses = function() {
+education.showOnlineCourses = function() {
 	$('#education').append(HTMLonlineClasses);
 	education.onlineCourses.forEach(function(course) {
 		var formattedTitle = (HTMLonlineTitle).replace('%data%', course.title);
@@ -197,10 +202,6 @@ var showOnlineCourses = function() {
 	});
 };
 
-education.display = function() {
-	showSchools();
-	showOnlineCourses();
-};
 
 
 
@@ -209,7 +210,8 @@ bio.display();
 //calls work //
 work.display();
 //calls education//
-education.display();
+education.showSchools();
+education.showOnlineCourses();
 //calls projects //
 project.display();
 
